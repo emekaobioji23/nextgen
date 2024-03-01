@@ -4,7 +4,7 @@ ii. for organization they should only be granted loan if they have been in opera
  */
 const canAProspectiveBorrowerGetALoan=(object)=>{
 
-    let decision = "";
+    let decision = "Function canAProspectiveBorrowerGetALoan: ";
     if (object.type == "individual") {
         decision +="An individual,";
         if (object.gender == "male") {
@@ -65,3 +65,16 @@ let prospectiveBorrower = {
 }
 
 console.log(canAProspectiveBorrowerGetALoan(prospectiveBorrower));
+/* Write a function that reads ten numbers and figures out which number is the third highest and returns the number. */
+const read10NumbersAndFigureOut3rdHighestAndReturnIt=()=>{
+    let arrayOfNumbers = [10];
+    //get the numbers
+    for (i=0;i<10;i++){
+        arrayOfNumbers[i]=Math.round(Math.random()*100);
+    }
+    console.log(`Function read10NumbersAndFigureOut3rdHighestAndReturnIt: unsorted array = ${arrayOfNumbers}`);
+    arrayOfNumbers = arrayOfNumbers.sort((a,b)=>a-b);
+    console.log(`Function read10NumbersAndFigureOut3rdHighestAndReturnIt: sorted array = ${arrayOfNumbers}`);
+    console.log(`Function read10NumbersAndFigureOut3rdHighestAndReturnIt: third highest = ${arrayOfNumbers[6]}`);
+}
+read10NumbersAndFigureOut3rdHighestAndReturnIt();
