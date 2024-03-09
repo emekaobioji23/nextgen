@@ -1,74 +1,21 @@
-/*
-ASSIGNMENT
-1. Write a JavaScript code snippet demonstrating the use of each type of variable declaration (`var`, `let`, and `const`) showing their differences and explaining the output.
-*/
-const aConstVariable = 1;
-console.log("aConstVariable = ",aConstVariable);
-//aConstVariable = 2;
-//console.log("aConstVariable = ",aConstVariable);
-let aLetVariable = 1;
-console.log("aLetVariable = ",aLetVariable);
-aLetVariable = 2;
-console.log("aLetVariable before child scope = ",aLetVariable);
-{
-    let aLetVariable = 3;
-    console.log("aLetVariable in child scope = ",aLetVariable);
+/* 2. Write a function that accepts three numbers, it sums the first two
+numbers and it then multiples the sum with the third number */
+const sumAndMult=(number1,number2,number3)=>{
+    return (number1+number2)*number3;
 }
-console.log("aLetVariable after child scope = ",aLetVariable);
+console.log(sumAndMult(4,5,10));
+console.log(sumAndMult(5,10,4));
+console.log(sumAndMult(10,4,5));
 
-var aVarVariable = 1;
-console.log("aVarVariable = ",aVarVariable);
-aLetVariable = 2;
-console.log("aVarVariable before child scope = ",aVarVariable);
-{
-    var aVarVariable = 3;
-    console.log("aVarVariable in child scope = ",aVarVariable);
+/* 2. Write a function called “generateMultiplicationTable” that accepts 2
+variables as input, the first being the number that we want to calculate
+it’s multiples while the second one is a number that stands for the
+highest multiple to be generated from 1. Print to the console
+multiplication table for the first variable from 1 to the second variable */
+
+const generateMultiplicationTable=(number1, number2)=>{
+    for(i=1;i<=number2;i++){
+        console.log(number1+" * "+i+" = "+(number1*i));
+    }
 }
-console.log("aVarVariable after child scope = ",aVarVariable);
-/*
-2. Write JavaScript code snippets for the following operators and ensure the results are logged on the console; 
-Arithmetic Operators 
-Comparison Operators 
-Logical Operators 
-Assignment Operators
-Increment/Decrement Operators
-*/
-console.clear();
-//Arithmetic and Comparison
-console.log("aConstVariable = ",aConstVariable);
-console.log("aLetVariable = ",aLetVariable);
-console.log("aVarVariable = ",aVarVariable);
-console.log("aLetVariable + aVarVariable - aConstVariable * aConstVariable / aLetVariable = ",aLetVariable+aVarVariable-aConstVariable*aConstVariable/aLetVariable);
-console.log("aLetVariable > aVarVariable = ",aLetVariable>aVarVariable);
-console.log("aLetVariable < aVarVariable = ",aLetVariable<aVarVariable);
-console.log("aLetVariable >= aVarVariable = ",aLetVariable>=aVarVariable);
-console.log("aLetVariable <= aVarVariable = ",aLetVariable<=aVarVariable);
-console.log("aLetVariable == aVarVariable = ",aLetVariable==aVarVariable);
-console.log("aLetVariable === aVarVariable = ",aLetVariable===aVarVariable);
-console.log("aLetVariable != aVarVariable = ",aLetVariable!=aVarVariable);
-console.log("aLetVariable !== aVarVariable = ",aLetVariable!==aVarVariable);
-console.log("aLetVariable ? aVarVariable : aConstVariable = ",aLetVariable?aVarVariable:aConstVariable);
-
-
-console.clear();
-//Logical
-console.log("aConstVariable = ",aConstVariable);
-console.log("aLetVariable = ",aLetVariable);
-console.log("aVarVariable = ",aVarVariable);
-console.log("aLetVariable < aVarVariable || aLetVariable > aVarVariable = ",aLetVariable<aVarVariable||aLetVariable<aVarVariable);
-console.log("aLetVariable < aVarVariable && aLetVariable > aVarVariable = ",aLetVariable<aVarVariable&&aLetVariable>aVarVariable);
-console.log("!(aLetVariable < aVarVariable || aLetVariable > aVarVariable) = ",!(aLetVariable<aVarVariable||aLetVariable<aVarVariable));
-
-console.clear();
-//assignment and increment
-console.log("aConstVariable = ",aConstVariable);
-console.log("aLetVariable = ",aLetVariable);
-console.log("aVarVariable = ",aVarVariable);
-console.log("aLetVariable = aVarVariable + aLetVariable = ",aLetVariable=aVarVariable+aLetVariable);
-console.log("aLetVariable = aVarVariable * aLetVariable = ",aLetVariable=aVarVariable*aLetVariable);
-console.log("aLetVariable++  = ",aLetVariable++);
-console.log("aLetVariable--  = ",aLetVariable--);
-console.log("aLetVariable  = ",aLetVariable);
-console.log("++aLetVariable = ",++aLetVariable);
-console.log("--aLetVariable  = ",--aLetVariable);
-console.log("aLetVariable  = ",aLetVariable);
+generateMultiplicationTable(5,12);
